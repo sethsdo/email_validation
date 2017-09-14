@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Seth's Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    <body class="container">
+        <div class="alert alert-success fade in">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Success!</strong>The email you enter is valid! Thank you!.
+        </div>
+        <h1 class="jumbotron">Emails</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Email Addresses entered:</th>
+                </tr>
+            </thead>
+            {% for email in all_emails: %}
+            <tbody>
+                <tr>
+                    <td>{{ email['id'] }}</td>
+                    <td>{{ email['email'] }}</td>
+                    <td>{{ email['created_at'] }}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <hr>
+        <hr>
+    </body>
+</html>
